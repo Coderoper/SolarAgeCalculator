@@ -1,21 +1,19 @@
 import $ from 'jquery';
-import {find}  from './triangle-tracker';
+import {find}  from './solar-age';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-var result1 = "equilateral";
-var result2 = "isoceles";
-var result3 = "scalene";
-var result4 = "not a triangle";
-
+var result1 =;
+var result2 =;
+var result3 =;
+var result4 =;
 
 $(document).ready(function() {
   $("form#length").submit(function() {
     event.preventDefault();
-    var input1 = parseInt($("input#length1").val());
-    var input2 = parseInt($("input#length2").val());
-    var input3 = parseInt($("input#length3").val());
-    var finalresult=find(input1,input2,input3);
+    var input1 = parseInt($("input#age").val());
+    var input2 = parseInt($("input#lifeExpectancy").val());
+    var finalresult=find(input1,input2);
 
     if (finalresult ==  result1)
     {
