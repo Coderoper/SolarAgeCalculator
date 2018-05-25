@@ -1,41 +1,21 @@
 import $ from 'jquery';
-import {find}  from './solar-age';
+import { SolarAge }  from './solar-age';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-var result1 =;
-var result2 =;
-var result3 =;
-var result4 =;
+// var MercuryAge;
+
+
 
 $(document).ready(function() {
-  $("form#length").submit(function() {
+  $("form#dob").submit(function(event) {
     event.preventDefault();
-    var input1 = parseInt($("input#age").val());
-    var input2 = parseInt($("input#lifeExpectancy").val());
-    var finalresult=find(input1,input2);
+    // var YearBorn = parseInt($("input#YearBorn").val());
+    // var MonthBorn = parseInt($("input#MonthBorn").val());
+    // var DayBorn = parseInt($("input#DayBorn").val());
+    // var DeathAge = parseInt($("input#DeathAge").val());
 
-    if (finalresult ==  result1)
-    {
 
-      $("#answer").text(result1);
-      $("#result").show();
-    }
-    else if (finalresult ==  result2)
-    {
-      $("#answer").text(result2);
-      $("#result").show();
-    }
-    else if (finalresult ==  result3)
-    {
-      $("#answer").text(result3);
-      $("#result").show();
-    }
-    else if(finalresult ==  result4)
-    {
-      $("#negative_answer").text(result4);
-      $("#negative_result").show();
-    }
 
   });
 });

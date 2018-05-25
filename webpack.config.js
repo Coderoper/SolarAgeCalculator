@@ -19,7 +19,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),   // new line
     new HtmlWebpackPlugin({
-      title: 'Solar Age',
+      title: 'SolarAge',
       template: './src/index.html',
       inject: 'body'
     })
