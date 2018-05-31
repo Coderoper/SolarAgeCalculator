@@ -35,7 +35,7 @@ describe('SolarAge', function(){
     // console.log("age in years on Mars "+ testSolarAge.MarsAge(AgeInSeconds));
     expect(testSolarAge.MarsAge(AgeInSeconds)).toEqual(188);
   });
-  it('this should return years left on Mercury', function(){
+  it('this should return years left on Mercury', function(){ 
     var testSolarAge =new SolarAge(1, 1, 1, 100);
     var DeathAge= 100;
     //Get age for 50 year old person
