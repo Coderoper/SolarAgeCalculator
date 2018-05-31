@@ -46,47 +46,19 @@ export class SolarAge {
     var MarsAge=1.88* AgeInSeconds/60/60/24/365;
     return MarsAge;
   };
-  //   // return ("Venus Age"
-  // AgeYears(){
-  //   var AgeYears=parseInt((TodaysDate-Dob));
-  //
-  //   return (AgeYears)
-  // }
-  //
-  // AgeInSeconds(){
-  //   var AgeInSeconds=(TodaysDate.getTime()-Dob.getTime())/1000;
-  //   AgeInSeconds=parseFloat(AgeInSeconds);
-  //   return AgeInSeconds
-  // }
-  //
-  // TimeBetweenDatesInSeconds(){
-  //   var startDate =new Date(Year1, Month1, Day1, 0);
-  //   var endDate=new Date(Year2, Month2, Day2,0);
-  //   var TimeBetweenDatesInDays=(endDate.getTime()-startDate.getTime())/1000;
-  //   return TimeBetweenDatesInDays;
-  //
-  // }
-  // YearsLeftToLive(){
-  //   //3153600 seconds in a yearΩ
-  //   var YearsLeft=DeathAge-AgeYears;
-  //   return YearsLeft;
-  //   // return ("several more years")
-  // }
-  //
-
-
-  // };
-  // MarsAge()
-  // {
-  //   var MarsAge;
-  //   var  AgeYears;
-  //   if( AgeYears != null)
-  //   {
-  //     MarsAge=1.88* AgeYears;
-  //   }
-  //   return MarsAge;
-  //     // return ("Mars Age")
-  // };
-
-
+  YearsLeftMars(DeathAge, AgeInSeconds)
+  {
+    var YearsLeftMars =DeathAge*1.88 -AgeInSeconds*1.88/60/60/24/365;
+    return YearsLeftMars;
+  }
+  YearsLeftMercury(DeathAge, AgeInSeconds)
+  {
+    var YearsLeftMercury =DeathAge*.24 -AgeInSeconds*.24/60/60/24/365;
+    return YearsLeftMercury;
+  }
+  YearsLeftVenus(DeathAge, AgeInSeconds)
+  {
+    var YearsLeftVenus =DeathAge*.62 -AgeInSeconds*.62/60/60/24/365;
+    return YearsLeftVenus;
+  }
 }
