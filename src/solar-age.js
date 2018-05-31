@@ -21,62 +21,72 @@ export class SolarAge {
     this.DayBorn=DayBorn;
     this.DeathAge=DeathAge;
   }
-  AgeInSeconds(){
+  TimeBetweenDatesInSeconds(startDate, endDate){
+
+    var TimeBetweenDatesInSeconds=(endDate.getTime()-startDate.getTime())/1000;
+    return TimeBetweenDatesInSeconds;
+
+  }
+  GetAgeInSeconds(Dob,TodaysDate){
     var AgeInSeconds=(TodaysDate.getTime()-Dob.getTime())/1000;
-    return AgeInSeconds
+    return AgeInSeconds;
   }
-  AgeYears(){
-    var AgeYears=(TodaysDate.getTime()-Dob.getTime())/1000/60/60/24/365;
-    return AgeYears
-  }
-  TimeBetweenDatesInDays(){
-    var startDate =new Date(Year1, Month1, Day1, 0);
-    var endDate=new Date(Year2, Month2, Day2,0);
-    var TimeBetweenDatesInDays=(endDate.getTime()-startDate.getTime())/86400000;
-    return TimeBetweenDatesInDays;
-
-  }
-  YearsLeftToLive(){
-    //3153600 seconds in a yearΩ
-    var YearsLeft=DeathAge-AgeYears;
-    return YearsLeft;
-    // return ("several more years")
-  }
-
-  MercuryAge()
+  MercuryAge(AgeInSeconds)
   {
-    var MercuryAge;
-    var  AgeYears;
-    if( AgeYears != null)
-    {
-      MercuryAge=.24* AgeYears;
-    }
+    var MercuryAge=.24* AgeInSeconds/60/60/24/365;
     return MercuryAge;
-    // return ("Mercury Age")
-
   };
-  VenusAge()
+  VenusAge(AgeInSeconds)
   {
-    var VenusAge;
-    var  AgeYears;
-    if( AgeYears != null)
-    {
-      VenusAge=.62* AgeYears;
-    }
+    var VenusAge=.62* AgeInSeconds/60/60/24/365;
     return VenusAge;
-    // return ("Venus Age")
   };
-  MarsAge()
+  MarsAge(AgeInSeconds)
   {
-    var MarsAge;
-    var  AgeYears;
-    if( AgeYears != null)
-    {
-      MarsAge=1.88* AgeYears;
-    }
+    var MarsAge=1.88* AgeInSeconds/60/60/24/365;
     return MarsAge;
-      // return ("Mars Age")
   };
+  //   // return ("Venus Age"
+  // AgeYears(){
+  //   var AgeYears=parseInt((TodaysDate-Dob));
+  //
+  //   return (AgeYears)
+  // }
+  //
+  // AgeInSeconds(){
+  //   var AgeInSeconds=(TodaysDate.getTime()-Dob.getTime())/1000;
+  //   AgeInSeconds=parseFloat(AgeInSeconds);
+  //   return AgeInSeconds
+  // }
+  //
+  // TimeBetweenDatesInSeconds(){
+  //   var startDate =new Date(Year1, Month1, Day1, 0);
+  //   var endDate=new Date(Year2, Month2, Day2,0);
+  //   var TimeBetweenDatesInDays=(endDate.getTime()-startDate.getTime())/1000;
+  //   return TimeBetweenDatesInDays;
+  //
+  // }
+  // YearsLeftToLive(){
+  //   //3153600 seconds in a yearΩ
+  //   var YearsLeft=DeathAge-AgeYears;
+  //   return YearsLeft;
+  //   // return ("several more years")
+  // }
+  //
+
+
+  // };
+  // MarsAge()
+  // {
+  //   var MarsAge;
+  //   var  AgeYears;
+  //   if( AgeYears != null)
+  //   {
+  //     MarsAge=1.88* AgeYears;
+  //   }
+  //   return MarsAge;
+  //     // return ("Mars Age")
+  // };
 
 
 }

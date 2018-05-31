@@ -12,7 +12,7 @@ A program that returns the solar age of users on different planets.
 
 ## Specs
 * 1. Take person's age, convert to seconds
-* 2. Determine difference between to dates using Javascript Date object
+* 2. Determine difference in seconds between two dates using Javascript Date object
 * 3. Return age in Mercury years
 * 4. Return age in Venus years
 * 5. Return age in Mars years
